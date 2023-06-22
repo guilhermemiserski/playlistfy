@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.login-text {
+  text-align: center;
+  margin-bottom: 28px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.green-text {
+  color: #00ffa0;
+}
+
+.button {
+  margin: 8px;
+  padding: 8px 16px;
+  background-color: #00ffa0;
+  color: #191414;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.spotify-icon {
+  vertical-align: middle;
+  font-size: 26px;
+}
+
+.welcome-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 46px;
+  margin-top: 32px;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.artistas-favoritos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.musicas-favoritas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #191414;
+}
+
+.card-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.card {
+  width: 190px;
+  height: 254px;
+  background: #00ffa0;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.5vmin solid #fff;
+  box-shadow: 0.4rem 0.4rem #fff;
+  overflow: hidden;
+  margin: 26px;
+}
+
+.card-artist {
+  color: grey;
+}
+
+.link {
+  color: #00ffa0;
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+.search-container {
+  margin-top: 32px;
+}
+
+button:disabled {
+  background-color: grey;
+}
+
+.search-input-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  border: none;
+  border-bottom: solid 2px #00ffa0;
+  background-color: transparent;
+  font-size: 24px;
+  color: #fff;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.selected-track {
+  overflow: hidden;
+  width: 482px;
+  height: 80px;
+  display: inline-flex;
+  cursor: pointer;
+  border: #fff solid 1px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+.selected-track-image {
+  width: 80px;
+  height: 80px;
+}
+
+.selected-track-info {
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
+.selected-track-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.selected-track-artist {
+  font-size: 12px;
+}
+
+.selected {
+  border: #00ffa0 3px solid;
+}
+
+.playlist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
