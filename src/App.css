@@ -19,6 +19,8 @@
   margin: 8px;
   padding: 8px 16px;
   background-color: #00ffa0;
+  border: 0.5vmin solid #fff;
+  box-shadow: 0.4rem 0.4rem #fff;
   color: #191414;
   border: none;
   border-radius: 8px;
@@ -110,7 +112,7 @@
 }
 
 button:disabled {
-  background-color: grey;
+  background-color: #00ffa0;
 }
 
 .search-input-button {
