@@ -1,70 +1,60 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Playlistfy
 
-## Available Scripts
+Este projeto é um gerador de playlist para o Spotify que permite aos usuários criar listas de reprodução de forma rápida e prática. Com base em uma música selecionada pelo usuário, o gerador utiliza algoritmos inteligentes para sugerir outras músicas que combinem perfeitamente com o estilo, gênero ou humor da música inicial. Com apenas alguns cliques, os usuários podem montar uma playlist personalizada, economizando tempo e esforço na busca manual por músicas semelhantes. Desfrute de uma experiência musical enriquecedora com o nosso gerador de playlist intuitivo e descubra novas músicas que se encaixam perfeitamente no seu gosto musical.
+## Rodando localmente
 
-In the project directory, you can run:
+Clone o projeto
 
-### `npm start`
+```bash
+  git clone https://github.com/guilhermemiserski/playlistfy.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Entre no diretório do projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+  cd playlistfy
+```
 
-### `npm test`
+Instale as dependências
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  npm install
+```
 
-### `npm run build`
+Inicie o aplicativo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  npm run start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Aviso
 
-### `npm run eject`
+Para rodar localmente você vai precisar adicionar um arquivo .env com as seguintes váriaveis de ambiente:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+  REACT_APP_SPOTIFY_CLIENT_ID='seu_client_id'
+  REACT_APP_SPOTIFY_REDIRECT_URI='seu_redirect_uri'
+```
+Você consegue as mesmas [aqui](https://developer.spotify.com/documentation/web-api).
+## Documentação de cores
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Cor               | Hexadecimal                                                |
+| ----------------- | ---------------------------------------------------------------- |
+| Verde       | ![#00ffa0](https://via.placeholder.com/10/00ffa0?text=+) #00ffa0 |
+| Preto       | ![#191414](https://via.placeholder.com/10/191414?text=+) #191414 |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tecnologias
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![React](https://img.shields.io/badge/React-18.2.0-blue)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Autor
 
-### Analyzing the Bundle Size
+- [Github](https://www.github.com/guilhermemiserski)
+- [Twitter](https://twitter.com/g7miserski)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
