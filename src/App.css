@@ -141,12 +141,13 @@ button:disabled {
 
 .selected-track {
   overflow: hidden;
-  width: 482px;
+  width: 300px;
   height: 80px;
   display: inline-flex;
   cursor: pointer;
   border: #fff solid 1px;
   border-radius: 8px;
+  margin-top: 4px;
   margin-bottom: 4px;
 }
 
