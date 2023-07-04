@@ -66,6 +66,22 @@ function App() {
     )}&response_type=token`;
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('spotifyAccessToken');
+    setLoggedIn(false);
+  };
+
+  const handleHome = () => {
+    setGeneratePlaylist(false);
+  };
+
+  const handleSpotifyInfo = (card) => {
+    if (card) {
+        const url = card.external_urls.spotify;
+        window.open(url, '_blank');
+    }
+  };
+
   const fetchSearchResults = async (query) => {
     if (query) {
       try {
@@ -181,6 +197,14 @@ function App() {
               />
             </div>
           )}
+          <header>
+            <span className="link-header" onClick={handleLogout}>
+              logout
+            </span>
+            <span className="link-header" onClick={handleHome}>
+              home
+            </span>
+          </header>
 
           <div>
             {!loading && !generatePlaylist && (
@@ -202,13 +226,23 @@ function App() {
                   </h2>
                   <div className="card-container">
                     {topArtists.map((artist) => (
-                      <div className="card" key={artist.id}>
+                      <div onClick={() => handleSpotifyInfo(artist)}>
                         <img
-                          src={artist.images[0].url}
-                          alt={artist.name}
-                          className="card-image"
-                        />
-                        <h3 className="card-title">{artist.name}</h3>
+                          className="spotify-logo"
+                          src={
+                            process.env.PUBLIC_URL +
+                            '/Spotify_Logo_RGB_White.png'
+                          }
+                          alt="spotify-logo"
+                        ></img>
+                        <div className="card" key={artist.id}>
+                          <img
+                            src={artist.images[0].url}
+                            alt={artist.name}
+                            className="card-image"
+                          />
+                          <h3 className="card-title">{artist.name}</h3>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -220,13 +254,23 @@ function App() {
                   </h2>
                   <div className="card-container">
                     {topTracks.map((track) => (
-                      <div className="card" key={track.id}>
+                      <div onClick={() => handleSpotifyInfo(track)}>
                         <img
-                          src={track.album.images[0].url}
-                          alt={track.name}
-                          className="card-image"
-                        />
-                        <h3 className="card-title">{track.name}</h3>
+                          className="spotify-logo"
+                          src={
+                            process.env.PUBLIC_URL +
+                            '/Spotify_Logo_RGB_White.png'
+                          }
+                          alt="spotify-logo"
+                        ></img>
+                        <div className="card" key={track.id}>
+                          <img
+                            src={track.album.images[0].url}
+                            alt={track.name}
+                            className="card-image"
+                          />
+                          <h3 className="card-title">{track.name}</h3>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -300,17 +344,30 @@ function App() {
                   <div>
                     <div className="card-container">
                       {playlist.map((track) => (
-                        <div className="card" key={track.id}>
+                        <div
+                          className="generated-playlist"
+                          onClick={() => handleSpotifyInfo(track)}
+                        >
                           <img
-                            src={track.album.images[0].url}
-                            alt={track.name}
-                            className="card-image"
-                          />
-                          <div className="playlist-track-info">
-                            <h3 className="card-title">{track.name}</h3>
-                            <p className="card-artist">
-                              {track.artists[0].name}
-                            </p>
+                            className="spotify-logo"
+                            src={
+                              process.env.PUBLIC_URL +
+                              '/Spotify_Logo_RGB_White.png'
+                            }
+                            alt="spotify-logo"
+                          ></img>
+                          <div className="card" key={track.id}>
+                            <img
+                              src={track.album.images[0].url}
+                              alt={track.name}
+                              className="card-image"
+                            />
+                            <div className="playlist-track-info">
+                              <h3 className="card-title">{track.name}</h3>
+                              <p className="card-artist">
+                                {track.artists[0].name}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       ))}

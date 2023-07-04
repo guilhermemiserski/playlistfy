@@ -1,3 +1,24 @@
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 16px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.link-header {
+  color: #00ffa0;
+  cursor: pointer;
+  text-decoration-line: underline;
+  margin-right: 16px;
+}
+
 .login {
   display: flex;
   flex-direction: column;
@@ -19,11 +40,9 @@
   margin: 8px;
   padding: 8px 16px;
   background-color: #00ffa0;
-  border: 0.5vmin solid #fff;
-  box-shadow: 0.4rem 0.4rem #fff;
-  color: #191414;
+  box-shadow: 0.2rem 0.2rem #fff;
+  color: black;
   border: none;
-  border-radius: 8px;
   cursor: pointer;
   font-size: 20px;
   font-weight: 700;
@@ -72,29 +91,28 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 36px;
+  margin-top: 16px;
 }
 
 .card-title {
   font-weight: bold;
-  color: #191414;
+  color: black;
 }
 
 .card-image {
   width: 200px;
   height: 200px;
-  border-radius: 8px;
 }
 
 .card {
-  width: 190px;
-  height: 254px;
+  width: 200px;
   background: #00ffa0;
   padding: 1rem;
-  border-radius: 1rem;
   border: 0.5vmin solid #fff;
-  box-shadow: 0.4rem 0.4rem #fff;
+  box-shadow: 0.2rem 0.2rem #fff;
   overflow: hidden;
-  margin: 26px;
+  cursor: pointer;
 }
 
 .card-artist {
@@ -146,7 +164,6 @@ button:disabled {
   display: inline-flex;
   cursor: pointer;
   border: #fff solid 1px;
-  border-radius: 8px;
   margin-top: 4px;
   margin-bottom: 4px;
 }
@@ -178,4 +195,8 @@ button:disabled {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.spotify-logo {
+  width: 80px;
 }

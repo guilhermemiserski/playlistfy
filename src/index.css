@@ -5,12 +5,7 @@ body {
   font-family: 'Varela Round', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(25, 20, 20);
-  background: linear-gradient(
-    90deg,
-    rgba(25, 20, 20, 1) 35%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: black;
   color: #fff;
 }
 
@@ -23,22 +18,20 @@ code {
 /* Firefox */
 * {
   scrollbar-width: auto;
-  scrollbar-color: #fff #191414;
+  scrollbar-color: #fff black;
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 16px;
+  width: 8px;
 }
 
 *::-webkit-scrollbar-track {
-  background: #191414;
+  background: black;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: #fff;
-  border-radius: 10px;
-  border: 3px solid #191414;
 }
 
 input[type='search']::-webkit-search-decoration,
