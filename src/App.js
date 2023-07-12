@@ -60,7 +60,7 @@ function App() {
     const clientID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
     const redirectURI = process.env.REACT_APP_SPOTIFY_REDIRECT_URI;
     const scope =
-      'user-read-private user-read-email user-top-read playlist-modify-public playlist-modify-private';
+      'user-top-read user-library-modify playlist-modify-public playlist-modify-private';
     window.location.href = `https://accounts.spotify.com/authorize?client_id=${clientID}&redirect_uri=${redirectURI}&scope=${encodeURIComponent(
       scope
     )}&response_type=token`;
